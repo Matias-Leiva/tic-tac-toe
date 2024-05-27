@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 import useTicTacToeGame from '../../hooks/useTicTacToeGame';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {useNavigation} from '@react-navigation/native';
+import {COLORS} from '../../styles/Colors';
 
 const Game = () => {
   const navigator = useNavigation();
@@ -24,9 +25,9 @@ const Game = () => {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'space-evenly',
+        backgroundColor: COLORS.main_2,
       }}>
       <View style={{}}>
-        <Text>TicTacToe Game</Text>
         {winner.length > 0 ? (
           <Text>Winner: {winner}</Text>
         ) : (
@@ -48,9 +49,7 @@ const Game = () => {
         <View
           style={{
             borderRadius: 16,
-            borderWidth: 1,
-            borderColor: '#000',
-            backgroundColor: 'blue',
+            backgroundColor: COLORS.main_1,
             alignItems: 'center',
             justifyContent: 'center',
             height: '100%',
